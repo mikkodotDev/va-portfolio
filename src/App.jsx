@@ -6,6 +6,9 @@ import { Services } from "./components/Services";
 import { TechStack } from "./components/TechStack";
 import { About } from "./components/About";
 import { CaseStudies } from "./components/CaseStudies";
+import { Pricing } from "./components/Pricing";
+import { Process } from "./components/Process";
+import { FAQ } from "./components/FAQ";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
 import { ThemeProvider } from "./context/ThemeContext";
@@ -66,6 +69,9 @@ function AppContent() {
       <div ref={workRef}>
         <CaseStudies />
       </div>
+      <Pricing />
+      <Process />
+      <FAQ />
       <div ref={contactRef}>
         <Contact />
       </div>

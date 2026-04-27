@@ -68,10 +68,10 @@ export function About() {
                   paddingLeft: 24,
                 }}
               >
-                "I started as a developer — writing code, debugging systems, and
-                building applications from the ground up. Over time, I realized
-                something: most businesses don't fail because of bad tech — they
-                struggle because of broken processes around it."
+                "I'm passionate about creating beautiful digital experiences
+                that actually work. From pixel-perfect designs to responsive
+                builds, I help small businesses and creators establish a strong
+                online presence with modern, user-friendly websites."
               </blockquote>
               <div
                 style={{
@@ -110,7 +110,7 @@ export function About() {
                       color: theme.darkMutedText,
                     }}
                   >
-                    Developer · Systems & Automation Specialist
+                    Frontend Developer · UI/UX Designer
                   </div>
                 </div>
               </div>
@@ -133,9 +133,9 @@ export function About() {
                 marginBottom: 24,
               }}
             >
-              The Bridge Between
+              Design Meets
               <br />
-              <em style={{ color: theme.primary }}>Dev & Operations</em>
+              <em style={{ color: theme.primary }}>for Better Websites</em>
             </h2>
             <p
               style={{
@@ -146,10 +146,9 @@ export function About() {
                 marginBottom: 20,
               }}
             >
-              With 3+ years of experience across development and operations, I
-              sit at the intersection of both worlds. I don't just understand
-              how to build systems — I understand why they're needed and where
-              they break.
+              As a frontend developer and UI/UX designer, I build clean,
+              responsive websites that help small businesses and creators look
+              professional and earn trust online.
             </p>
             <p
               style={{
@@ -160,10 +159,9 @@ export function About() {
                 marginBottom: 40,
               }}
             >
-              I've worked with e-commerce founders, SaaS teams, and solo
-              entrepreneurs to streamline their workflows — transforming messy,
-              manual processes into efficient, automated systems that actually
-              scale.
+              I work with WordPress (Elementor & Divi) and React to deliver
+              modern websites with clear user flows, strong visuals, and
+              conversion-focused sections.
             </p>
             <div
               style={{
@@ -173,10 +171,10 @@ export function About() {
               }}
             >
               {[
-                "Process Auditing & Workflow Optimization",
-                "API Integrations & Automation (Zapier, Make, Webhooks)",
-                "Shopify Store Management & Performance Optimization",
-                "Operations Support & System Design",
+                "Custom Landing Page Design (Figma to Live Site)",
+                "WordPress Builds (Elementor & Divi)",
+                "Responsive Frontend Development (React / HTML / CSS)",
+                "Website Redesigns & Performance Improvements",
               ].map((item, i) => (
                 <div
                   key={i}

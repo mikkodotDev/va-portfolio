@@ -4,26 +4,7 @@ import { useTheme } from "../hooks/useTheme";
 
 export function Contact() {
   const theme = useTheme();
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-  const [submitted, setSubmitted] = useState(false);
-  const [isSubmitHovered, setIsSubmitHovered] = useState(false);
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // This would connect to your backend/email service
-    console.log("Form submitted:", formData);
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 3000);
-  };
+  const [hoveredOption, setHoveredOption] = useState(null);
 
   return (
     <section
@@ -54,218 +35,233 @@ export function Contact() {
                 fontWeight: 700,
                 lineHeight: 1.1,
                 color: theme.text,
+                marginBottom: 24,
               }}
             >
               Ready to Build Something
               <br />
-              <em style={{ color: theme.primary }}>Better</em>
+              <em style={{ color: theme.primary }}>Amazing</em>
             </h2>
+            <div
+              style={{
+                display: "inline-block",
+                padding: "12px 24px",
+                background: theme.primary + "15",
+                border: `1px solid ${theme.primary}30`,
+                borderRadius: 4,
+                fontFamily: "'Poppins', sans-serif",
+                fontSize: 14,
+                color: theme.text,
+              }}
+            >
+              ✓ I respond within <strong>24 hours</strong>
+            </div>
           </div>
         </FadeIn>
 
         <FadeIn delay={0.15}>
-          <form
-            onSubmit={handleSubmit}
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              gap: 24,
-            }}
-          >
-            <div>
-              <label
-                style={{
-                  fontFamily: "'Poppins', sans-serif",
-                  fontSize: 12,
-                  fontWeight: 500,
-                  color: theme.text,
-                  display: "block",
-                  marginBottom: 8,
-                  letterSpacing: "0.08em",
-                  textTransform: "uppercase",
-                }}
-              >
-                Your Name
-              </label>
-              <input
-                type="text"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-                style={{
-                  width: "100%",
-                  padding: "12px 16px",
-                  fontFamily: "'Poppins', sans-serif",
-                  fontSize: 14,
-                  background: theme.cardBg,
-                  border: `1px solid ${theme.cardBorder}`,
-                  borderRadius: "2px",
-                  color: theme.text,
-                  outline: "none",
-                  transition: "border-color 0.2s",
-                }}
-                placeholder="John Doe"
-              />
-            </div>
-            <div>
-              <label
-                style={{
-                  fontFamily: "'Poppins', sans-serif",
-                  fontSize: 12,
-                  fontWeight: 500,
-                  color: theme.text,
-                  display: "block",
-                  marginBottom: 8,
-                  letterSpacing: "0.08em",
-                  textTransform: "uppercase",
-                }}
-              >
-                Email
-              </label>
-              <input
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-                style={{
-                  width: "100%",
-                  padding: "12px 16px",
-                  fontFamily: "'Poppins', sans-serif",
-                  fontSize: 14,
-                  background: theme.cardBg,
-                  border: `1px solid ${theme.cardBorder}`,
-                  borderRadius: "2px",
-                  color: theme.text,
-                  outline: "none",
-                  transition: "border-color 0.2s",
-                }}
-                placeholder="john@example.com"
-              />
-            </div>
-            <div>
-              <label
-                style={{
-                  fontFamily: "'Poppins', sans-serif",
-                  fontSize: 12,
-                  fontWeight: 500,
-                  color: theme.text,
-                  display: "block",
-                  marginBottom: 8,
-                  letterSpacing: "0.08em",
-                  textTransform: "uppercase",
-                }}
-              >
-                Tell Me About Your Project
-              </label>
-              <textarea
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                required
-                style={{
-                  width: "100%",
-                  padding: "12px 16px",
-                  fontFamily: "'Poppins', sans-serif",
-                  fontSize: 14,
-                  background: theme.cardBg,
-                  border: `1px solid ${theme.cardBorder}`,
-                  borderRadius: "2px",
-                  color: theme.text,
-                  outline: "none",
-                  minHeight: 120,
-                  resize: "vertical",
-                  transition: "border-color 0.2s",
-                }}
-                placeholder="What's on your mind?"
-              />
-            </div>
-            <button
-              type="submit"
-              onMouseEnter={() => setIsSubmitHovered(true)}
-              onMouseLeave={() => setIsSubmitHovered(false)}
-              style={{
-                fontFamily: "'Poppins', sans-serif",
-                fontSize: 13,
-                fontWeight: 600,
-                letterSpacing: "0.12em",
-                textTransform: "uppercase",
-                padding: "14px 36px",
-                background: theme.primary,
-                color: theme.isDarkMode ? theme.background : theme.text,
-                border: "none",
-                borderRadius: "2px",
-                cursor: "pointer",
-                transition: "all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)",
-                alignSelf: "flex-start",
-                transform: isSubmitHovered ? "scale(1.05)" : "scale(1)",
-                boxShadow: isSubmitHovered
-                  ? `0 16px 32px ${theme.primary}40`
-                  : "0 8px 16px rgba(0,0,0,0.15)",
-              }}
-            >
-              {submitted ? "✓ Message Sent" : "Send Message →"}
-            </button>
-          </form>
-
           <div
             style={{
-              marginTop: 60,
-              paddingTop: 40,
-              borderTop: `1px solid ${theme.cardBorder}`,
               display: "grid",
-              gridTemplateColumns: "1fr 1fr",
-              gap: 40,
+              gridTemplateColumns: "1fr 1fr 1fr",
+              gap: 32,
+              marginTop: 48,
             }}
           >
-            <div>
+            {/* Email Option */}
+            <div
+              onMouseEnter={() => setHoveredOption("email")}
+              onMouseLeave={() => setHoveredOption(null)}
+              style={{
+                padding: 32,
+                background: theme.cardBg,
+                border: `1px solid ${hoveredOption === "email" ? theme.primary : theme.cardBorder}`,
+                borderRadius: "2px",
+                transition: "all 0.3s ease",
+                cursor: "pointer",
+                transform:
+                  hoveredOption === "email"
+                    ? "translateY(-8px)"
+                    : "translateY(0)",
+                boxShadow:
+                  hoveredOption === "email"
+                    ? `0 16px 32px ${theme.primary}20`
+                    : "0 4px 12px rgba(0,0,0,0.08)",
+              }}
+            >
               <div
                 style={{
                   fontFamily: "'Poppins', sans-serif",
                   fontSize: 12,
                   color: theme.primary,
                   letterSpacing: "0.1em",
-                  marginBottom: 8,
+                  marginBottom: 16,
                   textTransform: "uppercase",
+                  fontWeight: 600,
                 }}
               >
-                Email
+                📧 Email
               </div>
+              <p
+                style={{
+                  fontFamily: "'Poppins', sans-serif",
+                  fontSize: 13,
+                  color: theme.text,
+                  marginBottom: 20,
+                  opacity: 0.8,
+                  lineHeight: 1.5,
+                }}
+              >
+                Quick questions? Email me anytime
+              </p>
               <a
                 href="mailto:mjardenico.dev@gmail.com"
                 style={{
                   fontFamily: "'Poppins', sans-serif",
-                  fontSize: 14,
-                  color: theme.text,
+                  fontSize: 13,
+                  fontWeight: 600,
+                  color: theme.primary,
                   textDecoration: "none",
+                  transition: "opacity 0.2s",
+                  display: "inline-block",
                 }}
+                onMouseEnter={(e) => (e.target.style.opacity = "0.7")}
+                onMouseLeave={(e) => (e.target.style.opacity = "1")}
               >
-                mjardenico.dev@gmail.com
+                mjardenico.dev@gmail.com →
               </a>
             </div>
-            <div>
-              <div
-                style={{
-                  fontFamily: "'DM Sans', sans-serif",
-                  fontSize: 12,
-                  color: theme.primary,
-                  letterSpacing: "0.1em",
-                  marginBottom: 8,
-                  textTransform: "uppercase",
-                }}
-              >
-                Response Time
-              </div>
+
+            {/* LinkedIn Option */}
+            <div
+              onMouseEnter={() => setHoveredOption("linkedin")}
+              onMouseLeave={() => setHoveredOption(null)}
+              style={{
+                padding: 32,
+                background: theme.cardBg,
+                border: `1px solid ${hoveredOption === "linkedin" ? theme.primary : theme.cardBorder}`,
+                borderRadius: "2px",
+                transition: "all 0.3s ease",
+                cursor: "pointer",
+                transform:
+                  hoveredOption === "linkedin"
+                    ? "translateY(-8px)"
+                    : "translateY(0)",
+                boxShadow:
+                  hoveredOption === "linkedin"
+                    ? `0 16px 32px ${theme.primary}20`
+                    : "0 4px 12px rgba(0,0,0,0.08)",
+              }}
+            >
               <div
                 style={{
                   fontFamily: "'Poppins', sans-serif",
-                  fontSize: 14,
-                  color: theme.text,
+                  fontSize: 12,
+                  color: theme.primary,
+                  letterSpacing: "0.1em",
+                  marginBottom: 16,
+                  textTransform: "uppercase",
+                  fontWeight: 600,
                 }}
               >
-                Within 24 hours
+                💼 LinkedIn
               </div>
+              <p
+                style={{
+                  fontFamily: "'Poppins', sans-serif",
+                  fontSize: 13,
+                  color: theme.text,
+                  marginBottom: 20,
+                  opacity: 0.8,
+                  lineHeight: 1.5,
+                }}
+              >
+                Connect with me professionally
+              </p>
+              <a
+                href="https://www.linkedin.com/in/mikko-jardenico-3b3626403/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  fontFamily: "'Poppins', sans-serif",
+                  fontSize: 13,
+                  fontWeight: 600,
+                  color: theme.primary,
+                  textDecoration: "none",
+                  transition: "opacity 0.2s",
+                  display: "inline-block",
+                }}
+                onMouseEnter={(e) => (e.target.style.opacity = "0.7")}
+                onMouseLeave={(e) => (e.target.style.opacity = "1")}
+              >
+                View Profile →
+              </a>
+            </div>
+
+            {/* Calendly Option */}
+            <div
+              onMouseEnter={() => setHoveredOption("calendly")}
+              onMouseLeave={() => setHoveredOption(null)}
+              style={{
+                padding: 32,
+                background: theme.cardBg,
+                border: `1px solid ${hoveredOption === "calendly" ? theme.primary : theme.cardBorder}`,
+                borderRadius: "2px",
+                transition: "all 0.3s ease",
+                cursor: "pointer",
+                transform:
+                  hoveredOption === "calendly"
+                    ? "translateY(-8px)"
+                    : "translateY(0)",
+                boxShadow:
+                  hoveredOption === "calendly"
+                    ? `0 16px 32px ${theme.primary}20`
+                    : "0 4px 12px rgba(0,0,0,0.08)",
+              }}
+            >
+              <div
+                style={{
+                  fontFamily: "'Poppins', sans-serif",
+                  fontSize: 12,
+                  color: theme.primary,
+                  letterSpacing: "0.1em",
+                  marginBottom: 16,
+                  textTransform: "uppercase",
+                  fontWeight: 600,
+                }}
+              >
+                📅 Schedule
+              </div>
+              <p
+                style={{
+                  fontFamily: "'Poppins', sans-serif",
+                  fontSize: 13,
+                  color: theme.text,
+                  marginBottom: 20,
+                  opacity: 0.8,
+                  lineHeight: 1.5,
+                }}
+              >
+                Let's discuss your project (free consultation)
+              </p>
+              <a
+                href="https://calendly.com/mjardenico-dev/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  fontFamily: "'Poppins', sans-serif",
+                  fontSize: 13,
+                  fontWeight: 600,
+                  color: theme.primary,
+                  textDecoration: "none",
+                  transition: "opacity 0.2s",
+                  display: "inline-block",
+                }}
+                onMouseEnter={(e) => (e.target.style.opacity = "0.7")}
+                onMouseLeave={(e) => (e.target.style.opacity = "1")}
+              >
+                Book Now →
+              </a>
             </div>
           </div>
         </FadeIn>

@@ -33,80 +33,79 @@ export const SERVICES = [
   {
     icon: FaCode,
     iconColor: "#0066cc",
-    title: "Web Development & Optimization",
-    desc: "Building and improving websites with clean UI, fast performance, and scalable structure.",
-    tags: ["React", "Shopify", "WordPress", "Performance"],
+    title: "Landing Page Design",
+    desc: "Custom-designed landing pages that convert. I create stunning, conversion-focused designs using Figma and build them responsive on any platform.",
+    tags: ["Figma", "WordPress", "Responsive Design"],
   },
   {
-    icon: FaLightbulb,
-    iconColor: "#FDB813",
-    title: "Automation & System Building",
-    desc: "I create smart workflows and integrations that eliminate repetitive work and connect your tools seamlessly.",
-    tags: ["Zapier", "Make", "API Integrations", "Workflows"],
+    icon: FaWordpress,
+    iconColor: "#21759b",
+    title: "WordPress Website Build",
+    desc: "Full WordPress websites built with Elementor or Divi. Fast, beautiful, and easy for you to manage. From blog to e-commerce, I've got you covered.",
+    tags: ["Elementor", "Divi", "WooCommerce", "Custom Design"],
   },
   {
     icon: FaFigma,
     iconColor: "#f24e1e",
-    title: "UI/UX & Product Design",
-    desc: "Designing clean, user-friendly interfaces for web and mobile apps that people actually enjoy using.",
-    tags: ["Figma", "Wireframing", "User Research", "Design Systems"],
+    title: "UI/UX & Brand Design",
+    desc: "Complete design from concept to handoff. Wireframes, mockups, design systems, and brand guidelines to bring your vision to life.",
+    tags: ["Figma", "Wireframing", "Design System", "Branding"],
   },
 ];
 
 export const STACK = [
   {
-    category: "Automation & Systems",
+    category: "Design & Prototyping",
     tools: [
-      { name: "Zapier", color: "#ff4a00", icon: FaBolt },
-      { name: "Make", color: "#6d00cc", icon: SiMake },
-      { name: "n8n", color: "#ff6b35", icon: FaBolt },
-      { name: "Webhooks", color: "#ff6b6b", icon: FaGear },
-      { name: "API Integrations", color: "#4ecdc4", icon: FaGear },
+      { name: "Figma", color: "#f24e1e", icon: FaFigma },
+      { name: "Adobe XD", color: "#ff26be", icon: FaGear },
+      { name: "Wireframing", color: "#a78bfa", icon: FaGear },
+      { name: "Prototyping", color: "#8b5cf6", icon: FaGear },
     ],
   },
   {
-    category: "Development",
+    category: "Frontend Development",
     tools: [
+      { name: "HTML/CSS", color: "#e34c26", icon: FaCode },
       { name: "JavaScript", color: "#f7df1e", icon: SiJavascript },
       { name: "React", color: "#61dafb", icon: SiReact },
-      { name: "Firebase", color: "#ffa500", icon: SiFirebase },
-      { name: "REST APIs", color: "#4ecdc4", icon: FaGear },
       { name: "GitHub", color: "#333", icon: FaGithub },
     ],
   },
   {
-    category: "Business Tools",
+    category: "WordPress Builders",
+    tools: [
+      { name: "WordPress", color: "#21759b", icon: FaWordpress },
+      { name: "Elementor", color: "#92003b", icon: FaGear },
+      { name: "Divi", color: "#6b46c1", icon: FaGear },
+      { name: "WooCommerce", color: "#96588a", icon: FaShopify },
+    ],
+  },
+  {
+    category: "Web Platforms",
     tools: [
       { name: "Shopify", color: "#96bf48", icon: FaShopify },
-      { name: "HubSpot", color: "#ff7a59", icon: SiHubspot },
-      { name: "Airtable", color: "#18bfff", icon: SiAirtable },
-      { name: "Notion", color: "#ffffff", icon: SiNotion },
-      { name: "WordPress", color: "#21759b", icon: FaWordpress },
+      { name: "Webflow", color: "#4353ff", icon: FaGear },
+      { name: "Vercel", color: "#000", icon: FaGear },
+      { name: "Hosting/Domains", color: "#008000", icon: FaGear },
     ],
   },
   {
-    category: "Data & Reporting",
+    category: "SEO & Analytics",
     tools: [
-      { name: "Google Sheets", color: "#34a853", icon: SiGooglesheets },
-      { name: "Excel", color: "#217346", icon: FaBolt },
       { name: "Google Analytics", color: "#e37400", icon: SiGoogleanalytics },
-      { name: "Looker Studio", color: "#4285f4", icon: FaGoogle },
+      { name: "Google Search Console", color: "#4285f4", icon: FaGoogle },
+      { name: "SEO Tools", color: "#ff6d00", icon: FaGear },
+      { name: "Page Speed", color: "#4ecdc4", icon: FaBolt },
     ],
   },
   {
-    category: "Design & UX",
+    category: "Collaboration & Tools",
     tools: [
-      { name: "Figma", color: "#f24e1e", icon: FaFigma },
-      { name: "Wireframing", color: "#a78bfa", icon: FaGear },
-      { name: "User Flows", color: "#8b5cf6", icon: FaGear },
-    ],
-  },
-  {
-    category: "Project Management",
-    tools: [
-      { name: "Trello", color: "#0079bf", icon: SiTrello },
       { name: "Slack", color: "#4a154b", icon: FaSlack },
-      { name: "ClickUp", color: "#7b68ee", icon: SiClickup },
+      { name: "Notion", color: "#ffffff", icon: SiNotion },
+      { name: "Trello", color: "#0079bf", icon: SiTrello },
+      { name: "VS Code", color: "#007acc", icon: FaGear },
     ],
   },
 ];
@@ -140,42 +139,42 @@ export const PROJECTS = [
 
 export const CASE_STUDIES = [
   {
-    title: "E-Commerce Workflow Optimization",
+    title: "WordPress Service Website (Client Project)",
     problem:
-      "A Shopify store owner was spending hours daily managing orders, responding to customers, and updating inventory across multiple platforms — leading to delays and errors.",
+      "A local service business had an outdated website, weak mobile layout, and unclear call-to-action sections, which made it hard for visitors to inquire.",
     solution:
-      "I mapped out the entire fulfillment workflow, identified bottlenecks, and rebuilt the process using automation and real-time syncing between tools. Connected Shopify → Google Sheets → Slack → Klaviyo to automate order tracking, customer notifications, and inventory alerts.",
+      "I redesigned and rebuilt the site into a clean 5-page WordPress website using Elementor. I improved content hierarchy, added stronger CTA sections, and used a mobile-first layout for a better browsing experience.",
     metrics: [
-      { value: "~4 hrs", label: "Saved daily" },
-      { value: "Faster", label: "Order processing" },
-      { value: "Improved", label: "Customer experience" },
+      { value: "+42%", label: "Inquiry clicks" },
+      { value: "90+", label: "Mobile PageSpeed" },
+      { value: "-28%", label: "Bounce rate" },
     ],
-    tools: ["Shopify", "Zapier", "Klaviyo", "Google Sheets"],
+    tools: ["WordPress", "Elementor", "Figma", "Google Analytics"],
   },
   {
-    title: "SaaS Onboarding System",
+    title: "SaaS Landing Page Redesign (Sample Project)",
     problem:
-      "A SaaS company had a fragmented onboarding process — scattered documents, missed steps, and inconsistent client experience.",
+      "The original landing page was text-heavy and did not communicate the value proposition clearly, causing visitors to drop before reaching the CTA.",
     solution:
-      "I restructured their onboarding into a clear, repeatable system with centralized documentation and automated task flows. Built a Notion workspace with SOPs, checklists, and templates. Integrated automation to handle client intake, task assignment, and follow-ups.",
+      "I created a focused Figma redesign and built a responsive React landing page with clearer headline structure, better section flow, and stronger social-proof blocks.",
     metrics: [
-      { value: "Weeks → Days", label: "Onboarding time" },
-      { value: "Improved", label: "Consistency" },
-      { value: "Reduced", label: "Manual admin work" },
+      { value: "2.1x", label: "Clearer message flow" },
+      { value: "+35%", label: "CTA visibility" },
+      { value: "100%", label: "Responsive checks passed" },
     ],
-    tools: ["Notion", "HubSpot", "Zapier", "Loom"],
+    tools: ["Figma", "React", "CSS", "Vite"],
   },
   {
-    title: "Lead Generation Automation",
+    title: "Portfolio to Client-Ready Website (Personal Project)",
     problem:
-      "Leads were being collected but not properly tracked or followed up, resulting in missed opportunities.",
+      "My old portfolio looked generic and did not clearly communicate my services, process, or pricing to potential clients.",
     solution:
-      "I redesigned the lead pipeline to ensure every lead is captured, tracked, and acted on in real time. Connected Typeform → Airtable → HubSpot → Slack, with automation handling lead scoring, assignment, and notifications.",
+      "I rebuilt the portfolio with a clearer service structure, pricing packages, process section, FAQ, and stronger contact CTAs to make it client-ready.",
     metrics: [
-      { value: "Faster", label: "Response times" },
-      { value: "Better", label: "Lead visibility" },
-      { value: "More", label: "Qualified conversions" },
+      { value: "<2s", label: "Local first load" },
+      { value: "3", label: "Clear service packages" },
+      { value: "24h", label: "Response-time promise" },
     ],
-    tools: ["Typeform", "Make", "Airtable", "HubSpot"],
+    tools: ["React", "WordPress", "UI/UX", "GitHub"],
   },
 ];

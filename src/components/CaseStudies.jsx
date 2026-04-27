@@ -52,8 +52,8 @@ export function CaseStudies() {
                 margin: "0 auto",
               }}
             >
-              Real systems. Real improvements. No fluff — just measurable
-              results.
+              A mix of client work and sample projects focused on design
+              quality, responsive development, and business-ready websites.
             </p>
           </div>
         </FadeIn>

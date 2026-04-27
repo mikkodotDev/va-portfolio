@@ -181,7 +181,7 @@ export function Footer({ scrollTo }) {
           >
             Interested in the fine print?{" "}
             <a
-              href="/Mikko_Jardenico_CV.pdf"
+              href="./src/downloads/MikkodotDev-VAResume.pdf"
               download
               style={{
                 color: theme.primary,

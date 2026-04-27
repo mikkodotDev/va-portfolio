@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTheme } from "../hooks/useTheme";
 import heroImage from "../assets/images/heroImage.png";
 
@@ -9,11 +9,42 @@ const buttonHoverStyle = (isHovered, theme) => ({
     : "0 4px 8px rgba(0,0,0,0.1)",
 });
 
+const heroStats = [
+  { value: 15, label: "Websites Designed", suffix: "+" },
+  { value: 8, label: "Happy Clients", suffix: "+" },
+  { value: 100, label: "% Responsive & Fast", suffix: "%" },
+];
+
 export function Hero({ scrollTo }) {
   const theme = useTheme();
   const [isHovered, setIsHovered] = useState(false);
   const [isCtaHovered, setIsCtaHovered] = useState(false);
   const [isSeeWorkHovered, setIsSeeWorkHovered] = useState(false);
+  const [animatedStats, setAnimatedStats] = useState(() =>
+    heroStats.map(() => 0),
+  );
+
+  useEffect(() => {
+    const duration = 1800;
+    const startTime = performance.now();
+
+    const tick = (currentTime) => {
+      const progress = Math.min((currentTime - startTime) / duration, 1);
+      const easedProgress = 1 - Math.pow(1 - progress, 3);
+
+      setAnimatedStats(
+        heroStats.map((stat) => Math.round(stat.value * easedProgress)),
+      );
+
+      if (progress < 1) {
+        animationFrameId = requestAnimationFrame(tick);
+      }
+    };
+
+    let animationFrameId = requestAnimationFrame(tick);
+
+    return () => cancelAnimationFrame(animationFrameId);
+  }, []);
 
   return (
     <section
@@ -91,12 +122,10 @@ export function Hero({ scrollTo }) {
               color: theme.text,
             }}
           >
-            From Messy Workflows to{" "}
+            Beautiful, Fast Websites{" "}
             <em style={{ color: theme.primary, fontStyle: "italic" }}>
-              Smart, Automated
+              Built for Conversions
             </em>
-            <br />
-            Systems
           </h1>
           <p
             style={{
@@ -109,9 +138,9 @@ export function Hero({ scrollTo }) {
               marginBottom: 40,
             }}
           >
-            I combine development, UI/UX, and automation to build systems that
-            simplify your workflow and save hours of manual work — so you can
-            focus on growing your business.
+            Frontend developer & UI/UX designer. I create responsive, modern
+            websites using WordPress, React, and design tools that help small
+            businesses and creators stand out online.
           </p>
           <div
             style={{
@@ -179,12 +208,8 @@ export function Hero({ scrollTo }) {
               borderTop: `1px solid ${theme.cardBorder}`,
             }}
           >
-            {[
-              ["3+", "Years Experience"],
-              ["40+", "Projects Delivered"],
-              ["12+", "Tools Mastered"],
-            ].map(([n, l]) => (
-              <div key={l}>
+            {heroStats.map((stat, index) => (
+              <div key={stat.label}>
                 <div
                   style={{
                     fontFamily: "'Poppins', sans-serif",
@@ -194,7 +219,8 @@ export function Hero({ scrollTo }) {
                     lineHeight: 1,
                   }}
                 >
-                  {n}
+                  {animatedStats[index]}
+                  {stat.suffix}
                 </div>
                 <div
                   style={{
@@ -205,7 +231,7 @@ export function Hero({ scrollTo }) {
                     marginTop: 4,
                   }}
                 >
-                  {l}
+                  {stat.label}
                 </div>
               </div>
             ))}

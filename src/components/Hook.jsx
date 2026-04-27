@@ -1,6 +1,6 @@
 import { FadeIn } from "./FadeIn";
 import { useTheme } from "../hooks/useTheme";
-import { FaBrain, FaFire, FaBullseye } from "react-icons/fa6";
+import { FaPalette, FaMobileScreen, FaRocket } from "react-icons/fa6";
 
 export function Hook() {
   const theme = useTheme();
@@ -59,9 +59,9 @@ export function Hook() {
               color: theme.text,
             }}
           >
-            You don't need more hands — you need{" "}
-            <em style={{ color: theme.primary }}>better systems.</em>
-            <br />I help you think, build, and automate smarter.
+            You need a website that's both{" "}
+            <em style={{ color: theme.primary }}>beautiful and effective.</em>
+            <br />I deliver both.
           </h2>
           <p
             style={{
@@ -73,10 +73,9 @@ export function Hook() {
               margin: "0 auto 64px",
             }}
           >
-            I don't just follow instructions — I analyze how your system works,
-            identify bottlenecks, and improve it. With a background in
-            development and design, I build solutions that are not only
-            functional, but efficient and easy to use.
+            I combine UI/UX design with frontend development to create websites
+            that convert visitors into customers. Fast builds, responsive
+            design, and platforms you can actually manage yourself.
           </p>
         </FadeIn>
 
@@ -92,22 +91,22 @@ export function Hook() {
         >
           {[
             [
-              FaBrain,
+              FaPalette,
               "#A78BFA",
-              "Process Optimization",
-              "I redesign workflows to remove repetitive tasks and improve efficiency.",
+              "Stunning Design",
+              "Every pixel thoughtfully designed to engage and convert your visitors.",
             ],
             [
-              FaFire,
+              FaMobileScreen,
               "#FF6B35",
-              "Developer Mindset",
-              "I don't just suggest solutions — I build and implement them.",
+              "Fully Responsive",
+              "Beautiful on desktop, tablet, and mobile. No compromise on user experience.",
             ],
             [
-              FaBullseye,
+              FaRocket,
               "#FF6B6B",
-              "Outcome-Driven Work",
-              "Every task I do connects to real business results, not just activity.",
+              "Fast & SEO Ready",
+              "Quick load times and search engine optimization built in from the start.",
             ],
           ].map(([IconComponent, color, title, desc], i) => (
             <FadeIn key={i} delay={i * 0.12}>

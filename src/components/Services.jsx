@@ -14,7 +14,7 @@ export function Services() {
         <FadeIn>
           <div style={{ marginBottom: 64 }}>
             <div style={{ marginBottom: 16 }} className="section-label">
-              What I Do
+              Services
             </div>
             <div
               style={{
@@ -34,9 +34,9 @@ export function Services() {
                   color: theme.text,
                 }}
               >
-                Services Built for
+                Here's how I can
                 <br />
-                <em style={{ color: theme.primary }}>Business Efficiency</em>
+                <em style={{ color: theme.primary }}>help you</em>
               </h2>
               <p
                 style={{
@@ -47,8 +47,7 @@ export function Services() {
                   lineHeight: 1.7,
                 }}
               >
-                Three core offerings. One goal: give you back your time and your
-                sanity.
+                Beautiful design. Fast builds. Client-friendly platforms.
               </p>
             </div>
           </div>
