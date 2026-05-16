@@ -3,13 +3,22 @@ import { createClient } from "@supabase/supabase-js";
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
 const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 
+let supabase = null;
+
 if (!supabaseUrl || !supabaseAnonKey) {
   console.warn(
     "Supabase credentials not found. Form submissions will not be saved to the database.",
   );
+} else {
+  try {
+    supabase = createClient(supabaseUrl, supabaseAnonKey);
+  } catch (error) {
+    console.error("Failed to initialize Supabase:", error);
+    supabase = null;
+  }
 }
 
-export const supabase = createClient(supabaseUrl || "", supabaseAnonKey || "");
+export { supabase };
 
 /**
  * Submit a project brief form to Supabase
@@ -18,7 +27,7 @@ export const supabase = createClient(supabaseUrl || "", supabaseAnonKey || "");
  */
 export async function submitProjectBrief(formData) {
   try {
-    if (!supabaseUrl || !supabaseAnonKey) {
+    if (!supabase) {
       return {
         success: false,
         message:
@@ -93,6 +102,11 @@ export async function submitProjectBrief(formData) {
  */
 export async function getAllProjectBriefs() {
   try {
+    if (!supabase) {
+      console.warn("Supabase not initialized");
+      return [];
+    }
+    
     const { data, error } = await supabase
       .from("project_briefs")
       .select("*")
@@ -116,6 +130,11 @@ export async function getAllProjectBriefs() {
  */
 export async function getProjectBriefById(id) {
   try {
+    if (!supabase) {
+      console.warn("Supabase not initialized");
+      return null;
+    }
+    
     const { data, error } = await supabase
       .from("project_briefs")
       .select("*")
