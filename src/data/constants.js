@@ -1,31 +1,4 @@
-import {
-  FaGear,
-  FaLightbulb,
-  FaClipboardList,
-  FaBolt,
-  FaCode,
-} from "react-icons/fa6";
-import {
-  FaShopify,
-  FaWordpress,
-  FaGoogle,
-  FaSlack,
-  FaFigma,
-  FaGithub,
-} from "react-icons/fa";
-import {
-  SiMake,
-  SiNotion,
-  SiAirtable,
-  SiTrello,
-  SiHubspot,
-  SiJavascript,
-  SiReact,
-  SiFirebase,
-  SiGooglesheets,
-  SiGoogleanalytics,
-  SiClickup,
-} from "react-icons/si";
+
 
 // ===== Design Tokens =====
 export const DESIGN_TOKENS = {
@@ -230,47 +203,233 @@ export const CASE_STUDIES = [
 ];
 
 export const CORE_SKILLS = [
-  {
-    icon: FaGear,
-    title: "Process Optimization",
-    desc: "Streamlining workflows and automating repetitive tasks to save time and reduce errors."
-  },
-  {
-    icon: FaCode,
-    title: "Web Development",
-    desc: "Building and maintaining responsive, user-friendly websites and landing pages."
-  },
-  {
-    icon: FaLightbulb,
-    title: "Creative Solutions",
-    desc: "Finding innovative ways to solve business problems and improve user experience."
-  }
+  "WordPress Website Design & Development",
+  "Landing Page Design & Conversion Optimization",
+  "UI/UX & Responsive Web Design",
+  "Elementor & Divi Page Builder",
+  "Frontend Development (HTML/CSS/JavaScript)",
+  "Web Performance & SEO Optimization",
+  "Client Communication & Project Management",
+  "Brand Design & Visual Identity",
 ];
 
-export const TOOLS_AND_PLATFORMS = [
-  { name: "Figma", icon: FaFigma, category: "Design" },
-  { name: "WordPress", icon: FaWordpress, category: "CMS" },
-  { name: "Shopify", icon: FaShopify, category: "E-commerce" },
-  { name: "React", icon: SiReact, category: "Frontend" },
-  { name: "Make", icon: SiMake, category: "Automation" },
-  { name: "Notion", icon: SiNotion, category: "Management" }
-];
+export const TOOLS_AND_PLATFORMS = STACK;
 
 export const PORTFOLIO_PROJECTS = [
   {
-    id: 1,
-    title: "E-Commerce Overhaul",
-    category: "E-Commerce",
-    image: "/src/assets/images/projects/shopify-store.jpg",
-    tags: ["Shopify", "Klaviyo", "Zapier"],
-    description: "Rebuilt product pages and integrated abandoned cart automations."
+    id: "nonprofit-website",
+    name: "Non-Profit Community Hub",
+    dateCreated: "October 2024",
+    category: "WordPress Build",
+    shortDescription:
+      "A comprehensive community website for a non-profit organization with volunteer sign-up, event management, and donor integration.",
+    clientNeeded: {
+      problem:
+        "The organization needed a modern, user-friendly website to increase volunteer engagement and donations.",
+      explanation:
+        "They required clear navigation, mobile responsiveness, event scheduling, and a seamless donation workflow.",
+    },
+    howIHelped:
+      "I designed and built a WordPress site using Elementor with custom sections for volunteer sign-up, featured events, testimonials, and integrated PayPal for donations. Implemented SEO best practices and optimized for mobile.",
+    results: [
+      { metric: "+156%", label: "Volunteer sign-ups" },
+      { metric: "+42%", label: "Donation inquiries" },
+      { metric: "98", label: "Mobile PageSpeed Score" },
+    ],
+    figmaUrl: "https://www.figma.com",
+    liveUrl: "https://example-nonprofit.com",
+    placeholder: "https://images.unsplash.com/photo-1553531088-b0f5efd82d59?w=800&h=600&fit=crop",
   },
   {
-    id: 2,
-    title: "Lead Pipeline Automation",
-    category: "Automation",
-    image: "/src/assets/images/projects/automation.jpg",
-    tags: ["Make", "HubSpot", "Airtable"],
-    description: "Connected multiple platforms into a single automated lead scoring flow."
-  }
+    id: "ecommerce-store",
+    name: "E-Commerce Fashion Store",
+    dateCreated: "September 2024",
+    category: "WordPress + WooCommerce",
+    shortDescription:
+      "Fully functional e-commerce platform for a sustainable fashion brand with product catalog, checkout, and inventory management.",
+    clientNeeded: {
+      problem:
+        "The brand needed an online store to reach customers globally and streamline sales operations.",
+      explanation:
+        "Required product filters, shopping cart, secure payment gateway, order tracking, and inventory sync.",
+    },
+    howIHelped:
+      "Built a WordPress e-commerce site with WooCommerce, integrated Stripe and PayPal, added product filtering, reviews section, and automated order confirmation emails. Created mobile-first design with fast loading.",
+    results: [
+      { metric: "+89%", label: "Online orders monthly" },
+      { metric: "2.1s", label: "Average page load" },
+      { metric: "94%", label: "Customer satisfaction" },
+    ],
+    figmaUrl: "https://www.figma.com",
+    liveUrl: "https://example-fashion.com",
+    placeholder: "https://images.unsplash.com/photo-1460925895917-adf4e566c39f?w=800&h=600&fit=crop",
+  },
+  {
+    id: "coaching-landing",
+    name: "Life Coaching Landing Page",
+    dateCreated: "August 2024",
+    category: "Landing Page Design",
+    shortDescription:
+      "High-converting landing page for a life coach with service packages, testimonials, and email capture.",
+    clientNeeded: {
+      problem:
+        "The coach needed a professional landing page to convert visitors into coaching clients.",
+      explanation:
+        "Required clear value proposition, service tiers, social proof, calendar integration, and email list building.",
+    },
+    howIHelped:
+      "Designed and built a conversion-focused landing page in Figma and Elementor. Added service comparison table, client testimonials, integrated Calendly for bookings, and Mailchimp for email capture.",
+    results: [
+      { metric: "+127%", label: "Conversion rate" },
+      { metric: "34", label: "Bookings/month" },
+      { metric: "2,400", label: "Email subscribers" },
+    ],
+    figmaUrl: "https://www.figma.com",
+    liveUrl: "https://example-coaching.com",
+    placeholder: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop",
+  },
+  {
+    id: "saas-website",
+    name: "SaaS Product Website",
+    dateCreated: "July 2024",
+    category: "Web Design",
+    shortDescription:
+      "Modern, scalable website for a SaaS platform with feature showcase, pricing tiers, and signup flow.",
+    clientNeeded: {
+      problem:
+        "The SaaS company needed a website that effectively showcases features and converts free-trial signups.",
+      explanation:
+        "Needed feature comparisons, interactive demos section, clear pricing tiers, customer testimonials, and smooth signup flow.",
+    },
+    howIHelped:
+      "Created a custom design in Figma with interactive elements. Built responsive pages using React/Elementor with feature cards, pricing toggle, FAQ accordion, and integrated with their auth system.",
+    results: [
+      { metric: "+64%", label: "Free trial signups" },
+      { metric: "3.8/5", label: "Average rating" },
+      { metric: "45s", label: "Avg session duration" },
+    ],
+    figmaUrl: "https://www.figma.com",
+    liveUrl: "https://example-saas.com",
+    placeholder: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
+  },
+  {
+    id: "agency-portfolio",
+    name: "Digital Agency Portfolio",
+    dateCreated: "June 2024",
+    category: "Portfolio Website",
+    shortDescription:
+      "Showcase portfolio for a creative agency displaying projects, services, and client testimonials.",
+    clientNeeded: {
+      problem:
+        "The agency needed a professional portfolio to attract high-quality clients and showcase their best work.",
+      explanation:
+        "Required project gallery, case studies, service descriptions, team profiles, and client testimonials.",
+    },
+    howIHelped:
+      "Designed and built a stunning portfolio with custom project cards, lightbox galleries, animated backgrounds, smooth scrolling, and integrated contact forms.",
+    results: [
+      { metric: "+73%", label: "Inquiry requests" },
+      { metric: "15+", label: "Projects showcased" },
+      { metric: "4.9/5", label: "Client testimonials" },
+    ],
+    figmaUrl: "https://www.figma.com",
+    liveUrl: "https://example-agency.com",
+    placeholder: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=600&fit=crop",
+  },
+  {
+    id: "restaurant-website",
+    name: "Restaurant Booking Website",
+    dateCreated: "May 2024",
+    category: "WordPress Build",
+    shortDescription:
+      "Full-featured restaurant website with online reservations, menu showcase, and location details.",
+    clientNeeded: {
+      problem:
+        "The restaurant wanted to streamline reservations and showcase their menu online.",
+      explanation:
+        "Needed reservation system, menu display with images, photo gallery, testimonials, and Google Maps integration.",
+    },
+    howIHelped:
+      "Built WordPress site with Elementor, integrated TablePress for reservations, created menu gallery with lightboxes, added customer reviews section, and optimized for local SEO.",
+    results: [
+      { metric: "+220", label: "Online reservations/month" },
+      { metric: "92%", label: "Mobile traffic" },
+      { metric: "4.8★", label: "Google rating" },
+    ],
+    figmaUrl: "https://www.figma.com",
+    liveUrl: "https://example-restaurant.com",
+    placeholder: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800&h=600&fit=crop",
+  },
+  {
+    id: "startup-mvp",
+    name: "Tech Startup MVP Landing",
+    dateCreated: "April 2024",
+    category: "Landing Page",
+    shortDescription:
+      "Minimalist landing page for a tech startup launching their MVP with beta signup and feature highlights.",
+    clientNeeded: {
+      problem:
+        "The startup needed a clean, fast landing page to collect beta signups before full launch.",
+      explanation:
+        "Required clear problem/solution messaging, feature highlights, waitlist form, and social media links.",
+    },
+    howIHelped:
+      "Created a minimalist design focused on conversions. Built with React for optimal performance, added animated features section, integrated email capture, and included social proof counters.",
+    results: [
+      { metric: "2,100", label: "Beta signups" },
+      { metric: "1.2s", label: "Load time" },
+      { metric: "68%", label: "Email capture rate" },
+    ],
+    figmaUrl: "https://www.figma.com",
+    liveUrl: "https://example-startup.com",
+    placeholder: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop",
+  },
+  {
+    id: "course-platform",
+    name: "Online Course Platform",
+    dateCreated: "March 2024",
+    category: "WordPress Learning",
+    shortDescription:
+      "Educational platform with course listings, student dashboard, and course enrollment system.",
+    clientNeeded: {
+      problem:
+        "An educator needed a platform to sell and deliver online courses to students worldwide.",
+      explanation:
+        "Required course pages, payment integration, student login, progress tracking, and certification.",
+    },
+    howIHelped:
+      "Integrated LearnDash plugin with WordPress, created course landing pages, set up payment processing, designed student dashboard, and configured email notifications for course progress.",
+    results: [
+      { metric: "450+", label: "Active students" },
+      { metric: "+$42K", label: "Monthly revenue" },
+      { metric: "4.7/5", label: "Course rating" },
+    ],
+    figmaUrl: "https://www.figma.com",
+    liveUrl: "https://example-courses.com",
+    placeholder: "https://images.unsplash.com/photo-1516534775068-bb6c1213e73e?w=800&h=600&fit=crop",
+  },
+  {
+    id: "healthcare-clinic",
+    name: "Healthcare Clinic Website",
+    dateCreated: "February 2024",
+    category: "WordPress Build",
+    shortDescription:
+      "Professional healthcare website with appointment booking, doctor profiles, and patient information.",
+    clientNeeded: {
+      problem:
+        "The clinic needed an online presence to reduce administrative work and improve patient experience.",
+      explanation:
+        "Required appointment scheduling, doctor bios, service information, insurance details, and contact options.",
+    },
+    howIHelped:
+      "Built professional WordPress site with appointment booking system, created doctor profile pages, added service descriptions, integrated contact forms, and implemented HIPAA-friendly privacy practices.",
+    results: [
+      { metric: "+320%", label: "Online bookings" },
+      { metric: "98%", label: "Patient satisfaction" },
+      { metric: "2x", label: "No-show reduction" },
+    ],
+    figmaUrl: "https://www.figma.com",
+    liveUrl: "https://example-clinic.com",
+    placeholder: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=600&fit=crop",
+  },
 ];
