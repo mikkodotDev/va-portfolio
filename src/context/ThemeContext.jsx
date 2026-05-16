@@ -5,9 +5,9 @@ export const ThemeContext = createContext();
 export const lightTheme = {
   text: "#050a0a",
   background: "#f1f8f9",
-  primary: "#56b0b8",
-  secondary: "#9aa6d6",
-  accent: "#7d72c5",
+  primary: "#47a1a9",
+  secondary: "#7b8bc0",
+  accent: "#6b5eb5",
   // Derived colors for cards and UI elements
   cardBg: "#e8f0f2",
   cardBorder: "#c5dfe4",
@@ -20,9 +20,9 @@ export const lightTheme = {
 export const darkTheme = {
   text: "#f5fafa",
   background: "#060d0e",
-  primary: "#47a1a9",
-  secondary: "#293565",
-  accent: "#453a8d",
+  primary: "#5fc5ce",
+  secondary: "#8fa3e6",
+  accent: "#9b8dd9",
   // Derived colors for cards and UI elements
   cardBg: "#0f1617",
   cardBorder: "#1a2527",
@@ -67,7 +67,7 @@ export function ThemeProvider({ children }) {
     <ThemeContext.Provider value={value}>
       <div
         style={{
-          fontFamily: "'DM Sans', sans-serif",
+          fontFamily: "'Poppins', sans-serif",
           background: theme.background,
           color: theme.text,
           minHeight: "100vh",

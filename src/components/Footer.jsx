@@ -1,11 +1,70 @@
 import { useState } from "react";
 import { useTheme } from "../hooks/useTheme";
 
-export function Footer({ scrollTo }) {
+export function Footer({ scrollTo, hideLinks = false }) {
   const theme = useTheme();
   const [hoveredLink, setHoveredLink] = useState(null);
   const [hoveredSocial, setHoveredSocial] = useState(null);
   const [isBackToTopHovered, setIsBackToTopHovered] = useState(false);
+
+  if (hideLinks) {
+    return (
+      <footer
+        style={{
+          padding: "64px 5% 40px",
+          background: theme.isDarkMode
+            ? "rgba(6, 13, 14, 0.8)"
+            : "rgba(241, 248, 249, 0.5)",
+          borderTop: `1px solid ${theme.cardBorder}`,
+        }}
+      >
+        <div style={{ maxWidth: 1200, margin: "0 auto" }}>
+          <div
+            style={{
+              paddingTop: 32,
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              flexWrap: "wrap",
+              gap: 24,
+            }}
+          >
+            <div
+              style={{
+                fontFamily: "'Poppins', sans-serif",
+                fontSize: 12,
+                color: theme.darkMutedText,
+              }}
+            >
+              © {new Date().getFullYear()} Mikko Jardenico. Built with React &
+              designed to scale.
+            </div>
+            <button
+              onMouseEnter={() => setIsBackToTopHovered(true)}
+              onMouseLeave={() => setIsBackToTopHovered(false)}
+              onClick={() => scrollTo("hero")}
+              style={{
+                fontFamily: "'Poppins', sans-serif",
+                fontSize: 12,
+                color: theme.primary,
+                background: "none",
+                border: "none",
+                cursor: "pointer",
+                letterSpacing: "0.08em",
+                transition: "all 0.3s ease",
+                transform: isBackToTopHovered
+                  ? "translateY(-3px)"
+                  : "translateY(0)",
+                textDecoration: isBackToTopHovered ? "underline" : "none",
+              }}
+            >
+              ← BACK TO PORTFOLIO
+            </button>
+          </div>
+        </div>
+      </footer>
+    );
+  }
 
   return (
     <footer

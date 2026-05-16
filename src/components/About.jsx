@@ -159,7 +159,7 @@ export function About() {
                 marginBottom: 40,
               }}
             >
-              I work with WordPress (Elementor & Divi) and React to deliver
+              I work with WordPress (Elementor, Spectra & Gutenberg) and React to deliver
               modern websites with clear user flows, strong visuals, and
               conversion-focused sections.
             </p>
@@ -172,7 +172,7 @@ export function About() {
             >
               {[
                 "Custom Landing Page Design (Figma to Live Site)",
-                "WordPress Builds (Elementor & Divi)",
+                "WordPress Builds (Elementor, Spectra & Gutenberg)",
                 "Responsive Frontend Development (React / HTML / CSS)",
                 "Website Redesigns & Performance Improvements",
               ].map((item, i) => (

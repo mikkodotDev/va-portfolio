@@ -1,4 +1,4 @@
-import { STACK } from "../data/constants";
+import { TOOLS_AND_PLATFORMS } from "../data/constants";
 import { FadeIn } from "./FadeIn";
 import { useTheme } from "../hooks/useTheme";
 
@@ -7,7 +7,7 @@ export function TechStack() {
 
   return (
     <section
-      id="stack"
+      id="tools"
       style={{
         padding: "100px 5%",
         background: theme.isDarkMode
@@ -22,7 +22,7 @@ export function TechStack() {
               style={{ textAlign: "center", marginBottom: 16 }}
               className="section-label"
             >
-              Tech Stack
+              Tools & Platforms
             </div>
             <div
               style={{
@@ -40,12 +40,12 @@ export function TechStack() {
                 color: theme.text,
               }}
             >
-              Tools I Work With <em style={{ color: theme.primary }}>Daily</em>
+              What I Build <em style={{ color: theme.primary }}>With</em>
             </h2>
           </div>
         </FadeIn>
 
-        {STACK.map((category, categoryIdx) => (
+        {TOOLS_AND_PLATFORMS.map((category, categoryIdx) => (
           <FadeIn key={categoryIdx} delay={0.15 + categoryIdx * 0.05}>
             <div
               className="stack-category"

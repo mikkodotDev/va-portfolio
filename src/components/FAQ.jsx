@@ -96,7 +96,7 @@ export function FAQ() {
                 style={{
                   marginBottom: 16,
                   border: `1px solid ${theme.cardBorder}`,
-                  borderRadius: 8,
+                  borderRadius: 3,
                   overflow: "hidden",
                   background: theme.cardBg,
                 }}
@@ -179,7 +179,7 @@ export function FAQ() {
               padding: "40px",
               background: theme.primary + "10",
               border: `1px solid ${theme.primary}30`,
-              borderRadius: 8,
+              borderRadius: 3,
               textAlign: "center",
             }}
           >

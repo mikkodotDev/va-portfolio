@@ -73,9 +73,9 @@ export function Hook() {
               margin: "0 auto 64px",
             }}
           >
-            I combine UI/UX design with frontend development to create websites
-            that convert visitors into customers. Fast builds, responsive
-            design, and platforms you can actually manage yourself.
+            I build clean, modern WordPress websites and landing pages that work
+            beautifully on mobile. Simple designs that are easy for you to
+            manage, fast to load, and focused on what matters: results.
           </p>
         </FadeIn>
 

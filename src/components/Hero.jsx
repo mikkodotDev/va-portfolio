@@ -9,6 +9,7 @@ const buttonHoverStyle = (isHovered, theme) => ({
     : "0 4px 8px rgba(0,0,0,0.1)",
 });
 
+// Make it dynamic and connected to project showcase/case studies
 const heroStats = [
   { value: 15, label: "Websites Designed", suffix: "+" },
   { value: 8, label: "Happy Clients", suffix: "+" },

@@ -70,6 +70,7 @@ export function Services() {
                   height: "100%",
                   background: theme.cardBg,
                   border: `1px solid ${theme.cardBorder}`,
+                  borderRadius: "3px",
                 }}
               >
                 <div style={{ fontSize: 32, marginBottom: 20 }}>

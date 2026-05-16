@@ -16,9 +16,30 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Light mode selection */
 ::selection {
   background: rgba(71, 161, 169, 0.25);
   color: inherit;
+}
+
+/* Dark mode selection */
+@media (prefers-color-scheme: dark) {
+  ::selection {
+    background: rgba(71, 161, 169, 0.35);
+    color: inherit;
+  }
+}
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 a {
@@ -88,11 +109,14 @@ button {
 
 /* Utility classes */
 .section-label {
-  font-family: "DM Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 11px;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .fade-in {
@@ -109,6 +133,18 @@ button {
 
 .fade-in.delayed-3 {
   animation-delay: 0.3s;
+}
+
+/* Respect user motion preferences for animations */
+@media (prefers-reduced-motion: reduce) {
+  .fade-in,
+  .fade-in.delayed-1,
+  .fade-in.delayed-2,
+  .fade-in.delayed-3 {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }
 
 .hide-mobile {
@@ -191,21 +227,70 @@ button {
   z-index: 1;
 }
 
-/* Card styles (can be extended) */
+/* Card styles - standardized across all components */
 .card {
-  transition:
-    border-color 0.25s ease,
-    transform 0.25s ease;
+  border-radius: 3px;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
 }
 
 .card:hover {
   transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Card variant for pricing/highlighted */
+.card.highlighted {
+  transform: scale(1);
+}
+
+.card.highlighted:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Interactive elements consistency */
+button,
+a[role="button"] {
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button:focus-visible,
+a[role="button"]:focus-visible {
+  outline: 2px solid;
+  outline-offset: 2px;
+}
+
+/* Tag/badge styles */
+.tag,
+.badge {
+  display: inline-block;
+  border-radius: 2px;
+  transition: all 0.2s ease;
+}
+
+.tag:hover,
+.badge:hover {
+  transform: translateY(-1px);
 }
 
 /* Input field focus styles */
 input:focus,
 textarea:focus {
-  outline: none;
+  outline: 2px solid;
+  outline-offset: 2px;
+}
+
+/* Link styling for better contrast */
+a {
+  position: relative;
+  text-decoration: none;
+}
+
+a:focus-visible {
+  outline: 2px solid;
+  outline-offset: 2px;
 }
 
 /* Text utilities */

@@ -70,13 +70,14 @@ export function Contact() {
           >
             {/* Email Option */}
             <div
+              className="card"
               onMouseEnter={() => setHoveredOption("email")}
               onMouseLeave={() => setHoveredOption(null)}
               style={{
                 padding: 32,
                 background: theme.cardBg,
                 border: `1px solid ${hoveredOption === "email" ? theme.primary : theme.cardBorder}`,
-                borderRadius: "2px",
+                borderRadius: "3px",
                 transition: "all 0.3s ease",
                 cursor: "pointer",
                 transform:
@@ -134,13 +135,14 @@ export function Contact() {
 
             {/* LinkedIn Option */}
             <div
+              className="card"
               onMouseEnter={() => setHoveredOption("linkedin")}
               onMouseLeave={() => setHoveredOption(null)}
               style={{
                 padding: 32,
                 background: theme.cardBg,
                 border: `1px solid ${hoveredOption === "linkedin" ? theme.primary : theme.cardBorder}`,
-                borderRadius: "2px",
+                borderRadius: "3px",
                 transition: "all 0.3s ease",
                 cursor: "pointer",
                 transform:
@@ -200,13 +202,14 @@ export function Contact() {
 
             {/* Calendly Option */}
             <div
+              className="card"
               onMouseEnter={() => setHoveredOption("calendly")}
               onMouseLeave={() => setHoveredOption(null)}
               style={{
                 padding: 32,
                 background: theme.cardBg,
                 border: `1px solid ${hoveredOption === "calendly" ? theme.primary : theme.cardBorder}`,
-                borderRadius: "2px",
+                borderRadius: "3px",
                 transition: "all 0.3s ease",
                 cursor: "pointer",
                 transform:

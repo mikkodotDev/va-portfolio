@@ -27,6 +27,56 @@ import {
   SiClickup,
 } from "react-icons/si";
 
+// ===== Design Tokens =====
+export const DESIGN_TOKENS = {
+  // Spacing Scale (8px base unit)
+  spacing: {
+    xs: "8px",
+    sm: "12px",
+    md: "16px",
+    lg: "24px",
+    xl: "32px",
+    "2xl": "48px",
+    "3xl": "64px",
+    "4xl": "80px",
+    "5xl": "100px",
+  },
+  // Border Radius
+  borderRadius: {
+    xs: "2px",
+    sm: "3px", // Card standard radius
+    md: "8px",
+    lg: "12px",
+  },
+  // Shadows
+  shadows: {
+    xs: "0 1px 2px rgba(0, 0, 0, 0.05)",
+    sm: "0 2px 4px rgba(0, 0, 0, 0.08)",
+    md: "0 4px 8px rgba(0, 0, 0, 0.1)",
+    lg: "0 8px 16px rgba(0, 0, 0, 0.12)",
+    "card-hover": "0 12px 24px rgba(0, 0, 0, 0.15)",
+  },
+  // Z-Index
+  zIndex: {
+    dropdown: 10,
+    sticky: 20,
+    fixed: 30,
+    modal: 40,
+    popover: 50,
+    tooltip: 60,
+  },
+  // Transitions
+  transitions: {
+    fast: "0.15s cubic-bezier(0.4, 0, 0.2, 1)",
+    base: "0.25s cubic-bezier(0.4, 0, 0.2, 1)",
+    slow: "0.35s cubic-bezier(0.4, 0, 0.2, 1)",
+  },
+  // Animation Delays (for cascade effects)
+  animationDelays: {
+    stagger: 0.05, // 50ms between items, cap at 3 items max
+  },
+};
+
 export const NAV_LINKS = ["Services", "Stack", "About", "Work", "Contact"];
 
 export const SERVICES = [
