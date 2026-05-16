@@ -1,4 +1,24 @@
 
+import {
+  FaGear,
+  FaCode,
+  FaBolt,
+} from "react-icons/fa6";
+import {
+  FaShopify,
+  FaWordpress,
+  FaGoogle,
+  FaSlack,
+  FaFigma,
+  FaGithub,
+} from "react-icons/fa";
+import {
+  SiJavascript,
+  SiReact,
+  SiGoogleanalytics,
+  SiNotion,
+  SiTrello,
+} from "react-icons/si";
 
 // ===== Design Tokens =====
 export const DESIGN_TOKENS = {
@@ -50,7 +70,7 @@ export const DESIGN_TOKENS = {
   },
 };
 
-export const NAV_LINKS = ["Services", "Stack", "About", "Work", "Contact"];
+export const NAV_LINKS = ["Services", "Stack", "About", "Work", "Contact", "Project Brief"];
 
 export const SERVICES = [
   {
