@@ -228,3 +228,49 @@ export const CASE_STUDIES = [
     tools: ["React", "WordPress", "UI/UX", "GitHub"],
   },
 ];
+
+export const CORE_SKILLS = [
+  {
+    icon: FaGear,
+    title: "Process Optimization",
+    desc: "Streamlining workflows and automating repetitive tasks to save time and reduce errors."
+  },
+  {
+    icon: FaCode,
+    title: "Web Development",
+    desc: "Building and maintaining responsive, user-friendly websites and landing pages."
+  },
+  {
+    icon: FaLightbulb,
+    title: "Creative Solutions",
+    desc: "Finding innovative ways to solve business problems and improve user experience."
+  }
+];
+
+export const TOOLS_AND_PLATFORMS = [
+  { name: "Figma", icon: FaFigma, category: "Design" },
+  { name: "WordPress", icon: FaWordpress, category: "CMS" },
+  { name: "Shopify", icon: FaShopify, category: "E-commerce" },
+  { name: "React", icon: SiReact, category: "Frontend" },
+  { name: "Make", icon: SiMake, category: "Automation" },
+  { name: "Notion", icon: SiNotion, category: "Management" }
+];
+
+export const PORTFOLIO_PROJECTS = [
+  {
+    id: 1,
+    title: "E-Commerce Overhaul",
+    category: "E-Commerce",
+    image: "/src/assets/images/projects/shopify-store.jpg",
+    tags: ["Shopify", "Klaviyo", "Zapier"],
+    description: "Rebuilt product pages and integrated abandoned cart automations."
+  },
+  {
+    id: 2,
+    title: "Lead Pipeline Automation",
+    category: "Automation",
+    image: "/src/assets/images/projects/automation.jpg",
+    tags: ["Make", "HubSpot", "Airtable"],
+    description: "Connected multiple platforms into a single automated lead scoring flow."
+  }
+];
