@@ -296,6 +296,66 @@ export function ProjectShowcaseDetail({ projectId, onBack }) {
           </div>
         </FadeIn>
 
+        {/* Gallery Section */}
+        {project.galleryImages && project.galleryImages.length > 0 && (
+          <FadeIn delay={0.3}>
+            <div style={{ marginBottom: 48 }}>
+              <div
+                style={{
+                  width: 48,
+                  height: 1,
+                  background: theme.primary,
+                  marginBottom: 24,
+                }}
+              />
+              <h2
+                style={{
+                  fontFamily: "'Poppins', sans-serif",
+                  fontSize: 24,
+                  fontWeight: 600,
+                  color: theme.text,
+                  marginBottom: 32,
+                }}
+              >
+                Project Gallery
+              </h2>
+
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: 24,
+                }}
+              >
+                {project.galleryImages.map((image, idx) => (
+                  <div
+                    key={idx}
+                    style={{
+                      borderRadius: 8,
+                      overflow: "hidden",
+                      border: `1px solid ${theme.cardBorder}`,
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      backgroundColor: theme.isDarkMode ? "#0a1516" : "#f5f5f5",
+                    }}
+                  >
+                    <img
+                      src={image}
+                      alt={`${project.name} gallery ${idx + 1}`}
+                      style={{
+                        width: "100%",
+                        height: "auto",
+                        display: "block",
+                      }}
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </FadeIn>
+        )}
+
         {/* Results */}
         <FadeIn delay={0.3}>
           <div style={{ marginBottom: 48 }}>

@@ -6,9 +6,8 @@ import { Services } from "./components/Services";
 import { CoreSkills } from "./components/CoreSkills";
 import { TechStack } from "./components/TechStack";
 import { About } from "./components/About";
-import { CaseStudies } from "./components/CaseStudies";
+import { PortfolioShowcase } from "./components/PortfolioShowcase";
 import { Process } from "./components/Process";
-import { FAQ } from "./components/FAQ";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
 import { ProjectBrief } from "./components/ProjectBrief";
@@ -113,10 +112,9 @@ function AppContent() {
             <About />
           </div>
           <div ref={workRef}>
-            <CaseStudies onProjectClick={handleProjectClick} />
+            <PortfolioShowcase onProjectClick={handleProjectClick} />
           </div>
           <Process />
-          <FAQ />
           <div ref={contactRef}>
             <Contact />
           </div>
